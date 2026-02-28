@@ -1,14 +1,12 @@
-
 import { tours } from "../data"
 import Title from "./Title"
+
 const Tours = () => {
   return (
     <section className="section" id="tours">
-
       <Title title="featured" subtitle="tours" />
 
       <div className="section-center featured-center">
-
         {tours.map((tour) => {
           const { id, image, date, title, info, location, duration, cost } = tour
 
@@ -16,7 +14,7 @@ const Tours = () => {
             <article key={id} className="tour-card">
               <div className="tour-img-container">
                 <img
-                  src={`/src/assets/${image}`}
+                  src={image}
                   className="tour-img"
                   alt={title}
                 />
@@ -44,7 +42,6 @@ const Tours = () => {
             </article>
           )
         })}
-
       </div>
     </section>
   )
